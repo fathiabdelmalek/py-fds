@@ -52,3 +52,10 @@ class Stack:
             return self.__top.data
         except Exception as ex:
             print("Error, %s" %ex, end=', ')
+
+    def reverse(self):
+        stck = Stack()
+        while not self.empty():
+            stck.push(self.pop())
+        return stck
+    

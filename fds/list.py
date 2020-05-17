@@ -120,3 +120,16 @@ class List:
             return tmp.data
         except Exception as ex:
             print("Error, %s" %ex, end=', ')
+
+    def reverse(self):
+        prv = None
+        cur = self.__head
+        nxt = cur.next
+        while cur is not None:
+            nxt = cur.next
+            cur.next = prv
+            prv = cur
+            cur = nxt
+        self.__head = prv
+        return self.__head
+        

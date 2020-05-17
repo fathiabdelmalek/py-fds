@@ -44,3 +44,4 @@ Simple implementaion of data structures __(DS)__ for python
 - __len__(self) // USE: len([DS_name]) // TODO: return the lenth of the __DS__
 - empty(self) // TODO: return True if the __DS__ is empty
 - clear(self) // TODO: clear the __DS__
+- reverse(self) // TODO: return the reverse of the __DS__

@@ -1,3 +1,5 @@
+import fds.stack
+
 class _Node:
     def __init__(self, data=None, next=None):
         self.data = data
@@ -62,3 +64,12 @@ class Queue:
             return self.__back.data
         except Exception as ex:
             print("Error, %s" %ex, end=', ')
+
+    def reverse(self):
+        stck = stack.Stack()
+        while not self.empty():
+            stck.push(self.enqueue())
+        while not stck.empty():
+            self.enqueue(stck.pop())
+        return self
+    
