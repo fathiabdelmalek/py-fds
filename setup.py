@@ -8,6 +8,7 @@ setup(
     version="0.9",
     author="Abdelmalek Fathi",
     author_email="fathiabdelmalek0666006253@gmail.com",
+    url="https://github.com/FathiMalek/py-fds.git",
     description="Simple implementation of data structures for python",
     long_description=long_description,
     long_description_content_type="text/markdown",
