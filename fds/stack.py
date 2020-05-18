@@ -53,6 +53,15 @@ class Stack:
         except Exception as ex:
             print("Error, %s" %ex, end=', ')
 
+    def find(self, data):
+        count = 0
+        tmp = self.__top
+        while tmp is not None:
+            if tmp.data == data:
+                count += 1
+            tmp = tmp.next
+        return count
+
     def reverse(self):
         stck = Stack()
         while not self.empty():

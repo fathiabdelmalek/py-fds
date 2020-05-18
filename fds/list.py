@@ -121,6 +121,15 @@ class List:
         except Exception as ex:
             print("Error, %s" %ex, end=', ')
 
+    def find(self, data):
+        count = 0
+        tmp = self.__head
+        while tmp is not None:
+            if tmp.data == data:
+                count += 1
+            tmp = tmp.next
+        return count
+
     def reverse(self):
         prv = None
         cur = self.__head
@@ -131,5 +140,5 @@ class List:
             prv = cur
             cur = nxt
         self.__head = prv
-        return self.__head
+        return self
         
