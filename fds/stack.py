@@ -67,4 +67,19 @@ class Stack:
         while not self.empty():
             stck.push(self.pop())
         return stck
-    
+    @classmethod
+    def merge(self, s1, s2):
+        try:
+            stck = Stack()
+            tmp1 = s1.__top
+            tmp2 = s2.__top
+            whilet tmp1 is no None:
+                stck.push(tmp1.data)
+                tmp1 = tmp1.next
+            while tmp2 is not None:
+                stck.push(tmp2.data)
+                tmp2 = tmp2.next
+            del tmp1, tmp2
+            return stck
+        except Exception as ex:
+            print("Error, %s" %ex)

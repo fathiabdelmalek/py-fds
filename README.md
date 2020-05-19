@@ -46,3 +46,4 @@ Simple implementaion of data structures __(DS)__ for python
 - clear(self) // TODO: clear the __DS__
 - find(self, data) // TODO: return the number of how many the entered data found in the __DS__
 - reverse(self) // TODO: return the reverse of the __DS__
+- merge(DS1, DS2) // USE: [DS] = [DS_type].merge([DS1], [DS2]) // TODO: return the merge of two DS __(from the same type)__ in new DS __(from the same type)__ // Example: stck3 = Stack.merge(stck1, stck2)

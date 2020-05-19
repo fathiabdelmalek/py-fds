@@ -76,13 +76,17 @@ class List:
                 while tmp.next is not None:
                     cur = tmp
                     tmp = tmp.next
+                data = tmp.data
                 cur.next = None
+                return data
             while count < pos:
                 cur = tmp
                 tmp = tmp.next
                 count += 1
+            deta = tmp.data
             cur.next = tmp.next
             del tmp
+            return data
         except Exception as ex:
             print("Error, %s" %ex)
     
@@ -142,3 +146,28 @@ class List:
         self.__head = prv
         return self
         
+        try:
+            lst = List()
+            while not self.empty():
+                lst.append(self.remove())
+            while not other.empty():
+                lst.append(other.remove())
+            return lst
+        except Exception as ex:
+            print("Error, %s" %ex, end=', ')
+    @classmethod
+    def merge(self, l1, l2):
+        try:
+            lst = List()
+            tmp1 = l1.__head
+            tmp2 = l2.__head
+            while tmp1 is not None:
+                lst.append(tmp1.data)
+                tmp1 = tmp1.next
+            while tmp2 is not None:
+                lst.append(tmp2.data)
+                tmp2 = tmp2.next
+            del tmp1, tmp2
+            return lst
+        except Exception as ex:
+            print("Error, %s" %ex)

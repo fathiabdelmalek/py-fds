@@ -69,7 +69,7 @@ class Queue:
         count = 0
         tmp = self.__front
         while tmp is not None:
-            if tmp.data = data:
+            if tmp.data == data:
                 count += 1
             tmp = tmp.next
         return count
@@ -81,4 +81,19 @@ class Queue:
         while not stck.empty():
             self.enqueue(stck.pop())
         return self
-    
+    @classmethod
+    def merge(self, q1, q2):
+        try:
+            que = Queue()
+            tmp1 = q1.__front
+            tmp2 = q2.__front
+            while tmp1 is not None:
+                que.enqueue(tmp1.data)
+                tmp1 = tmp1.next
+            while tmp2 is not None:
+                que.enqueue(tmp2.data)
+                tmp2 = tmp2.next
+            del tmp1, tmp2
+            return que
+        except Exception as ex:
+            print("Error, %s" %ex)
