@@ -73,7 +73,7 @@ class Stack:
             stck = Stack()
             tmp1 = s1.__top
             tmp2 = s2.__top
-            whilet tmp1 is no None:
+            while tmp1 is not None:
                 stck.push(tmp1.data)
                 tmp1 = tmp1.next
             while tmp2 is not None:
