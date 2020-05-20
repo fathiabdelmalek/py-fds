@@ -38,7 +38,7 @@ Simple implementaion of data structures __(DS)__ for python
 - front(self) // TODO: return the data in the first node
 - back(self) // TODO: return the data in the last node
 
-### API for all structures
+### API for all DSs
 
 - __repr__(self) // USE: print([DS_name]) // TODO: display the __DS__
 - __len__(self) // USE: len([DS_name]) // TODO: return the lenth of the __DS__
@@ -46,4 +46,10 @@ Simple implementaion of data structures __(DS)__ for python
 - clear(self) // TODO: clear the __DS__
 - find(self, data) // TODO: return the number of how many the entered data found in the __DS__
 - reverse(self) // TODO: return the reverse of the __DS__
-- merge(DS1, DS2) // USE: [DS] = [DS_type].merge([DS1], [DS2]) // TODO: return the merge of two DS __(from the same type)__ in new DS __(from the same type)__ // Example: stck3 = Stack.merge(stck1, stck2)
+
+### classmethods for all DSs
+
+// USE: [DS] = [DS_type].method([DS1], [DS2]) // Example: stck3 = Stack.merge(stck1, stck2) 
+__the tow DS parameters must be from the same DS__
+- merge(DS1, DS2) // TODO: return the merge of two DS in new DS
+- swap(DS1, DS2) // TODO: swap between DS1 and DS2 (DS1 will be DS2 and DS2 will be DS1)

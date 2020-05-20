@@ -82,7 +82,7 @@ class Queue:
             self.enqueue(stck.pop())
         return self
     @classmethod
-    def merge(self, q1, q2):
+    def merge(self, q1: Queue, q2: Queue):
         try:
             que = Queue()
             tmp1 = q1.__front
@@ -97,3 +97,14 @@ class Queue:
             return que
         except Exception as ex:
             print("Error, %s" %ex)
+    @classmethod
+    def swap(self, q1: Queue, q2: Queue):
+        bid = Queue()
+        while not q1.empty():
+            bid.enqueue(q1.dequeue())
+        while not q2.empty():
+            q1.enqueue(q2.dequeue())
+        while not bid.empty():
+            q2.enqueue(bid.dequeue())
+        del bid
+    
