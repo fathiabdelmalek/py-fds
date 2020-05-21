@@ -68,7 +68,7 @@ class Stack:
             stck.push(self.pop())
         return stck
     @classmethod
-    def merge(self, s1: Stack, s2: Stack):
+    def merge(self, s1, s2):
         try:
             stck = Stack()
             tmp1 = s1.__top
@@ -84,7 +84,7 @@ class Stack:
         except Exception as ex:
             print("Error, %s" %ex)
     @classmethod
-    def swap(self, s1: Stack, s2: Stack):
+    def swap(self, s1, s2):
         bid1 = Stack()
         bid2 = Stack()
         while not t1.empty():

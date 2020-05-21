@@ -156,7 +156,7 @@ class List:
         except Exception as ex:
             print("Error, %s" %ex, end=', ')
     @classmethod
-    def merge(self, l1: List, l2: List):
+    def merge(self, l1, l2):
         try:
             lst = List()
             tmp1 = l1.__head
@@ -172,7 +172,7 @@ class List:
         except Exception as ex:
             print("Error, %s" %ex)
     @classmethod
-    def swap(self, l1: List, l2: List):
+    def swap(self, l1, l2):
         bid = List()
         while not l1.empty():
             bid.append(l1.remove())
