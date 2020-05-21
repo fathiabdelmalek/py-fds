@@ -87,10 +87,10 @@ class Stack:
     def swap(self, s1, s2):
         bid1 = Stack()
         bid2 = Stack()
-        while not t1.empty():
-            bid1.push(t1.pop())
-        while not t2.empty():
-            bid2.push(t2.pop())
+        while not s1.empty():
+            bid1.push(s1.pop())
+        while not s2.empty():
+            bid2.push(s2.pop())
         while not bid1.empty():
             t2.push(bid1.pop())
         while not bid2.empty():
