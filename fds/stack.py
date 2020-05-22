@@ -38,7 +38,6 @@ class Stack:
     def push(self, data):
         node = _Node(data, self.__top)
         self.__top = node
-        return self.__top
 
     def pop(self):
         ptr = self.__top
@@ -97,3 +96,14 @@ class Stack:
             s1.push(bid2.pop())
         del bid1, bid2
     
+    def exchange(self, n):
+        bid1 = Stack()
+        bid2 = Stack()
+        for i in range(n):
+            bid1.push(self.pop())
+        while not self.empty():
+            bid2.push(self.pop())
+        while not bid1.empty():
+            self.push(bid1.pop())
+        while not bid2.empty():
+            self.push(bid2.pop())

@@ -46,12 +46,14 @@ Simple implementaion of data structures __(DS)__ for python
 - clear(self) // TODO: clear the __DS__
 - find(self, data) // TODO: return the number of how many the entered data found in the __DS__
 - reverse(self) // TODO: return the reverse of the __DS__
+- exchange(self, n) // TODO: circular permutation for n time
 
 ### classmethods for all DSs
 
-// USE: [DS] = [DS_type].method([DS1], [DS2]) // Examples:</br>
->>> stck3 = Stack.merge(stck1, stck2)</br>
->>> Stack.swap([DS1], [DS2])</br>
+// USE: [DS] = [DS_type].method([DS1], [DS2])</br>
+// Examples:</br>
+__>>>__ stck3 = Stack.merge(stck1, stck2)</br>
+__>>>__ Stack.swap([DS1], [DS2])</br>
 __the tow DS parameters must be from the same DS__
 - merge(DS1, DS2) // TODO: return the merge of two DS in new DS
 - swap(DS1, DS2) // TODO: swap between DS1 and DS2 (DS1 will be DS2 and DS2 will be DS1)

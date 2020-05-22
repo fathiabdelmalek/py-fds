@@ -182,3 +182,6 @@ class List:
             l2.append(bid.remove())
         del bid
     
+    def exchange(self, n):
+        for i in range(n):
+            self.append(self.remove())

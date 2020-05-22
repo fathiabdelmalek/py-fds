@@ -108,3 +108,6 @@ class Queue:
             q2.enqueue(bid.dequeue())
         del bid
     
+    def exchange(self, n):
+        for i in range(n):
+            self.enqueue(self.dequeue())
