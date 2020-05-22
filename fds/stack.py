@@ -92,8 +92,8 @@ class Stack:
         while not s2.empty():
             bid2.push(s2.pop())
         while not bid1.empty():
-            t2.push(bid1.pop())
+            s2.push(bid1.pop())
         while not bid2.empty():
-            t1.push(bid2.pop())
+            s1.push(bid2.pop())
         del bid1, bid2
     
