@@ -1,49 +1,70 @@
 class _Node:
-    def __init__(self, data=None, next=None):
+    def __init__(self, data=None, next=None, prev=None):
         self.data = data
         self.next = next
+        self.prev = prev
 
 
-class List:
+class DList:
     def __init__(self):
         self.__head = None
+        self.__tail = None
 
     def __str__(self):
-        l = "List : ["
+        l = "DList : ["
         tmp = self.__head
         while tmp is not None:
             l += str(tmp.data)
             if tmp.next is not None:
-                l += " -> "
+                l += " <=> "
             tmp = tmp.next
         return l + "]"
 
-    def __len__(self):
+    def __len__(self, value):
         size = 0
         tmp = self.__head
         while tmp is not None:
             tmp = tmp.next
             size += 1
-        return size 
+        return size
 
     def empty(self):
-        return self.__head is None
+        return self.__head == None
 
     def clear(self):
         while not self.empty():
             ptr = self.__head
             self.__head = self.__head.next
             del ptr
+    
+    def add_begin(self, data):
+        node = _Node(data)
+        if self.empty():
+            self.__head = self.__tail = node
+        else:
+            node.next=  self.__head
+            self.__head.prev = node
+            self.__head = node
+
+    def add_fin(self, data):
+        node = _Node(data)
+        if self.empty():
+            self.__head=  self.__tail = node
+        else:
+            node.prev = self.__tail
+            self.__tail.next = node
+            self.__tail = node
 
     def insert(self, data, pos=0):
         node = _Node(data)
         if self.empty():
-            self.__head = node
+            self.__head = self.__tail = node
         elif pos == 0:
             node.next = self.__head
+            self.__head.prev = node
             self.__head = node
         elif pos == -1:
-            self.append(data)
+            self.add_fin(data)
         else:
             tmp = self.__head
             count = 0
@@ -52,17 +73,8 @@ class List:
                 tmp = tmp.next
                 count += 1
             cur.next = node
+            node.prev = cur
             node.next = tmp
-        
-    def append(self, data):
-        node = _Node(data)
-        if self.empty():
-            self.__head = node
-        else:
-            tmp = self.__head
-            while tmp.next is not None:
-                tmp = tmp.next
-            tmp.next = node
 
     def remove(self, pos=0):
         try:
@@ -72,6 +84,7 @@ class List:
                 ptr = self.__head
                 data = self.__head.data
                 self.__head = self.__head.next
+                self.__head.prev= None
                 del ptr
                 return data
             elif pos == -1:
@@ -80,14 +93,17 @@ class List:
                     tmp = tmp.next
                 data = tmp.data
                 cur.next = None
+                self.__tail = cur
                 del tmp
                 return data
             while count < pos:
                 cur = tmp
                 tmp = tmp.next
                 count += 1
+            nxt = tmp.next
             deta = tmp.data
             cur.next = tmp.next
+            nxt.prev = cur
             del tmp
             return data
         except Exception as ex:
@@ -98,6 +114,7 @@ class List:
             while self.__head.data == data:
                 ptr = self.__head
                 self.__head = self.__head.next
+                self.__head.prev = None
                 del ptr
             cur = self.__head
             tmp = cur.next
@@ -118,16 +135,13 @@ class List:
             return self.__head.data
         except Exception as ex:
             print("Error, %s" %ex, end=', ')
-    
+
     def last(self):
         try:
-            tmp = self.__head
-            while tmp.next is not None:
-                tmp = tmp.next
-            return tmp.data
+            return self.__tail.data
         except Exception as ex:
             print("Error, %s" %ex, end=', ')
-
+    
     def find(self, data):
         count = 0
         tmp = self.__head
@@ -136,55 +150,3 @@ class List:
                 count += 1
             tmp = tmp.next
         return count
-
-    def reverse(self):
-        prv = None
-        cur = self.__head
-        nxt = cur.next
-        while cur is not None:
-            nxt = cur.next
-            cur.next = prv
-            prv = cur
-            cur = nxt
-        self.__head = prv
-        return self
-        
-        try:
-            lst = List()
-            while not self.empty():
-                lst.append(self.remove())
-            while not other.empty():
-                lst.append(other.remove())
-            return lst
-        except Exception as ex:
-            print("Error, %s" %ex, end=', ')
-    @classmethod
-    def merge(cls, l1, l2):
-        try:
-            lst = List()
-            tmp1 = l1.__head
-            tmp2 = l2.__head
-            while tmp1 is not None:
-                lst.append(tmp1.data)
-                tmp1 = tmp1.next
-            while tmp2 is not None:
-                lst.append(tmp2.data)
-                tmp2 = tmp2.next
-            del tmp1, tmp2
-            return lst
-        except Exception as ex:
-            print("Error, %s" %ex)
-    @classmethod
-    def swap(cls, l1, l2):
-        bid = List()
-        while not l1.empty():
-            bid.append(l1.remove())
-        while not l2.empty():
-            l1.append(l2.remove())
-        while not bid.empty():
-            l2.append(bid.remove())
-        del bid
-    
-    def exchange(self, n):
-        for i in range(n):
-            self.append(self.remove())

@@ -8,7 +8,7 @@ class Stack:
     def __init__(self):
         self.__top = None
 
-    def __repr__(self):
+    def __str__(self):
         s = "Stack : ["
         tmp = self.__top
         while tmp is not None:
@@ -67,7 +67,7 @@ class Stack:
             stck.push(self.pop())
         return stck
     @classmethod
-    def merge(self, s1, s2):
+    def merge(cls, s1, s2):
         try:
             stck = Stack()
             tmp1 = s1.__top
@@ -83,7 +83,7 @@ class Stack:
         except Exception as ex:
             print("Error, %s" %ex)
     @classmethod
-    def swap(self, s1, s2):
+    def swap(cls, s1, s2):
         bid1 = Stack()
         bid2 = Stack()
         while not s1.empty():
