@@ -1,3 +1,4 @@
-from fds.list import List
-from fds.stack import Stack
-from fds.queue import Queue
+from .list import List
+from .dlist import DList
+from .stack import Stack
+from .queue import Queue

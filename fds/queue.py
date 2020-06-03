@@ -81,6 +81,10 @@ class Queue:
         while not stck.empty():
             self.enqueue(stck.pop())
         return self
+    
+    def exchange(self, n):
+        for i in range(n):
+            self.enqueue(self.dequeue())
     @classmethod
     def merge(cls, q1, q2):
         try:
@@ -107,7 +111,3 @@ class Queue:
         while not bid.empty():
             q2.enqueue(bid.dequeue())
         del bid
-    
-    def exchange(self, n):
-        for i in range(n):
-            self.enqueue(self.dequeue())

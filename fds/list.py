@@ -147,17 +147,10 @@ class List:
             prv = cur
             cur = nxt
         self.__head = prv
-        return self
-        
-        try:
-            lst = List()
-            while not self.empty():
-                lst.append(self.remove())
-            while not other.empty():
-                lst.append(other.remove())
-            return lst
-        except Exception as ex:
-            print("Error, %s" %ex, end=', ')
+    
+    def exchange(self, n):
+        for i in range(n):
+            self.append(self.remove())
     @classmethod
     def merge(cls, l1, l2):
         try:
@@ -184,7 +177,3 @@ class List:
         while not bid.empty():
             l2.append(bid.remove())
         del bid
-    
-    def exchange(self, n):
-        for i in range(n):
-            self.append(self.remove())

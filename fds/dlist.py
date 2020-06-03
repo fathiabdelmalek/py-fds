@@ -150,3 +150,47 @@ class DList:
                 count += 1
             tmp = tmp.next
         return count
+
+    def reverse(self):
+        prv = self.__head
+        tmp = prv.next
+        prv.next = None
+        prv.prev = tmp
+        while tmp is not None:
+            nxt = tmp.next
+            tmp.next = prv
+            tmp.prev = nxt
+            prv = tmp
+            tmp = nxt
+        self.__head = prv
+
+    def exchange(self, n):
+        for i in range(n):
+            self.add_fin(self.remove())
+    @classmethod
+    def merge(cls, dl1, dl2):
+        try:
+            lst = DList()
+            tmp1 = dl1.__head
+            tmp2 = dl2.__head
+            while tmp1 is not None:
+                lst.add_fin(tmp1.data)
+                tmp1 = tmp1.next
+            while tmp2 is not None:
+                lst.add_fin(tmp2.data)
+                tmp2 = tmp2.next
+            del tmp1, tmp2
+            return lst
+        except Exception as ex:
+            print("Error, %s" %ex)
+    @classmethod
+    def swap(cls, dl1, dl2):
+        bid = DList()
+        while not dl1.empty():
+            bid.add_fin(dl1.remove())
+        while not dl2.empty():
+            dl1.add_fin(dl2.remove())
+        while not bid.empty():
+            dl2.add_fin(bid.remove())
+        del bid
+    

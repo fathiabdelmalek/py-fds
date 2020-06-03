@@ -66,6 +66,18 @@ class Stack:
         while not self.empty():
             stck.push(self.pop())
         return stck
+    
+    def exchange(self, n):
+        bid1 = Stack()
+        bid2 = Stack()
+        for i in range(n):
+            bid1.push(self.pop())
+        while not self.empty():
+            bid2.push(self.pop())
+        while not bid1.empty():
+            self.push(bid1.pop())
+        while not bid2.empty():
+            self.push(bid2.pop())
     @classmethod
     def merge(cls, s1, s2):
         try:
@@ -95,15 +107,3 @@ class Stack:
         while not bid2.empty():
             s1.push(bid2.pop())
         del bid1, bid2
-    
-    def exchange(self, n):
-        bid1 = Stack()
-        bid2 = Stack()
-        for i in range(n):
-            bid1.push(self.pop())
-        while not self.empty():
-            bid2.push(self.pop())
-        while not bid1.empty():
-            self.push(bid1.pop())
-        while not bid2.empty():
-            self.push(bid2.pop())
