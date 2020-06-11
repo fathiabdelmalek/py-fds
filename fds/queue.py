@@ -1,4 +1,5 @@
-import fds.stack
+from . import Stack
+
 
 class _Node:
     def __init__(self, data=None, next=None):
@@ -75,7 +76,7 @@ class Queue:
         return count
 
     def reverse(self):
-        stck = stack.Stack()
+        stck = Stack()
         while not self.empty():
             stck.push(self.enqueue())
         while not stck.empty():
@@ -85,6 +86,7 @@ class Queue:
     def exchange(self, n):
         for i in range(n):
             self.enqueue(self.dequeue())
+
     @classmethod
     def merge(cls, q1, q2):
         try:
@@ -101,6 +103,7 @@ class Queue:
             return que
         except Exception as ex:
             print("Error, %s" %ex)
+
     @classmethod
     def swap(cls, q1, q2):
         bid = Queue()

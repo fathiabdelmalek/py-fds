@@ -1,3 +1,4 @@
+
 class _Node:
     def __init__(self, data=None, next=None):
         self.data = data
@@ -151,6 +152,7 @@ class List:
     def exchange(self, n):
         for i in range(n):
             self.append(self.remove())
+
     @classmethod
     def merge(cls, l1, l2):
         try:
@@ -167,6 +169,7 @@ class List:
             return lst
         except Exception as ex:
             print("Error, %s" %ex)
+
     @classmethod
     def swap(cls, l1, l2):
         bid = List()

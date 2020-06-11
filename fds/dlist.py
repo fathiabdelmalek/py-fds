@@ -1,3 +1,4 @@
+
 class _Node:
     def __init__(self, data=None, next=None, prev=None):
         self.data = data
@@ -29,7 +30,7 @@ class DList:
         return size
 
     def empty(self):
-        return self.__head == None
+        return self.__head is None
 
     def clear(self):
         while not self.empty():
@@ -101,7 +102,7 @@ class DList:
                 tmp = tmp.next
                 count += 1
             nxt = tmp.next
-            deta = tmp.data
+            data = tmp.data
             cur.next = tmp.next
             nxt.prev = cur
             del tmp
@@ -167,6 +168,7 @@ class DList:
     def exchange(self, n):
         for i in range(n):
             self.add_fin(self.remove())
+
     @classmethod
     def merge(cls, dl1, dl2):
         try:
@@ -183,6 +185,7 @@ class DList:
             return lst
         except Exception as ex:
             print("Error, %s" %ex)
+
     @classmethod
     def swap(cls, dl1, dl2):
         bid = DList()
@@ -193,4 +196,3 @@ class DList:
         while not bid.empty():
             dl2.add_fin(bid.remove())
         del bid
-    

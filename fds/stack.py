@@ -1,3 +1,4 @@
+
 class _Node:
     def __init__(self, data=None, next=None):
         self.data = data
@@ -78,6 +79,7 @@ class Stack:
             self.push(bid1.pop())
         while not bid2.empty():
             self.push(bid2.pop())
+
     @classmethod
     def merge(cls, s1, s2):
         try:
@@ -94,6 +96,7 @@ class Stack:
             return stck
         except Exception as ex:
             print("Error, %s" %ex)
+
     @classmethod
     def swap(cls, s1, s2):
         bid1 = Stack()

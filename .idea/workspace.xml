@@ -1,7 +1,16 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="69795da7-2c5d-4ccf-911c-c8619e472d99" name="Default Changelist" comment="" />
+    <list default="true" id="69795da7-2c5d-4ccf-911c-c8619e472d99" name="Default Changelist" comment="">
+      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/py-fds.iml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/py-fds.iml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/fds/__init__.py" beforeDir="false" afterPath="$PROJECT_DIR$/fds/__init__.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/fds/dlist.py" beforeDir="false" afterPath="$PROJECT_DIR$/fds/dlist.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/fds/list.py" beforeDir="false" afterPath="$PROJECT_DIR$/fds/list.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/fds/queue.py" beforeDir="false" afterPath="$PROJECT_DIR$/fds/queue.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/fds/stack.py" beforeDir="false" afterPath="$PROJECT_DIR$/fds/stack.py" afterDir="false" />
+    </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -19,6 +28,7 @@
   <component name="PropertiesComponent">
     <property name="RunOnceActivity.OpenProjectViewOnStart" value="true" />
     <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
+    <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="last_opened_file_path" value="$PROJECT_DIR$" />
   </component>
   <component name="SvnConfiguration">
@@ -31,8 +41,12 @@
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
       <updated>1590188979171</updated>
+      <workItem from="1591741767890" duration="1135000" />
     </task>
     <servers />
+  </component>
+  <component name="TypeScriptGeneratedFilesManager">
+    <option name="version" value="2" />
   </component>
   <component name="WindowStateProjectService">
     <state x="526" y="204" key="#Notifications" timestamp="1590189793453">
