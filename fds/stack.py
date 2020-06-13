@@ -27,6 +27,13 @@ class Stack:
             tmp = tmp.next
         return size
 
+    @property
+    def top(self):
+        try:
+            return self.__top.data
+        except Exception as ex:
+            print("Error, %s" %ex, end=', ')
+
     def empty(self):
         return self.__top is None
 
@@ -46,12 +53,6 @@ class Stack:
         self.__top = self.__top.next
         del ptr
         return data
-
-    def top(self):
-        try:
-            return self.__top.data
-        except Exception as ex:
-            print("Error, %s" %ex, end=', ')
 
     def find(self, data):
         count = 0

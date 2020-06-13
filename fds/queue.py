@@ -29,6 +29,20 @@ class Queue:
             size += 1
             tmp = tmp.next
         return size
+    
+    @property
+    def front(self):
+        try:
+            return self.__front.data
+        except Exception as ex:
+            print("Error, %s" %ex, end=', ')
+
+    @property
+    def back(self):
+        try:
+            return self.__back.data
+        except Exception as ex:
+            print("Error, %s" %ex, end=', ')
 
     def empty(self):
         return self.__front is None
@@ -53,18 +67,6 @@ class Queue:
         self.__front = self.__front.next
         del ptr
         return data
-    
-    def front(self):
-        try:
-            return self.__front.data
-        except Exception as ex:
-            print("Error, %s" %ex, end=', ')
-
-    def back(self):
-        try:
-            return self.__back.data
-        except Exception as ex:
-            print("Error, %s" %ex, end=', ')
 
     def find(self, data):
         count = 0

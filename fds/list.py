@@ -25,7 +25,24 @@ class List:
         while tmp is not None:
             tmp = tmp.next
             size += 1
-        return size 
+        return size
+
+    @property
+    def first(self):
+        try:
+            return self.__head.data
+        except Exception as ex:
+            print("Error, %s" %ex, end=', ')
+    
+    @property
+    def last(self):
+        try:
+            tmp = self.__head
+            while tmp.next is not None:
+                tmp = tmp.next
+            return tmp.data
+        except Exception as ex:
+            print("Error, %s" %ex, end=', ')
 
     def empty(self):
         return self.__head is None
@@ -113,21 +130,6 @@ class List:
                     tmp = tmp.next
         except Exception as ex:
             print("Error, %s" %ex)
-
-    def first(self):
-        try:
-            return self.__head.data
-        except Exception as ex:
-            print("Error, %s" %ex, end=', ')
-    
-    def last(self):
-        try:
-            tmp = self.__head
-            while tmp.next is not None:
-                tmp = tmp.next
-            return tmp.data
-        except Exception as ex:
-            print("Error, %s" %ex, end=', ')
 
     def find(self, data):
         count = 0

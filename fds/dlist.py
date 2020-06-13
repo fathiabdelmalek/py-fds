@@ -21,13 +21,27 @@ class DList:
             tmp = tmp.next
         return l + "]"
 
-    def __len__(self, value):
+    def __len__(self):
         size = 0
         tmp = self.__head
         while tmp is not None:
             tmp = tmp.next
             size += 1
         return size
+
+    @property
+    def first(self):
+        try:
+            return self.__head.data
+        except Exception as ex:
+            print("Error, %s" %ex, end=', ')
+
+    @property
+    def last(self):
+        try:
+            return self.__tail.data
+        except Exception as ex:
+            print("Error, %s" %ex, end=', ')
 
     def empty(self):
         return self.__head is None
@@ -128,20 +142,9 @@ class DList:
                 else:
                     cur = tmp
                     tmp = tmp.next
+            self.__tail = cur
         except Exception as ex:
             print("Error, %s" %ex)
-
-    def first(self):
-        try:
-            return self.__head.data
-        except Exception as ex:
-            print("Error, %s" %ex, end=', ')
-
-    def last(self):
-        try:
-            return self.__tail.data
-        except Exception as ex:
-            print("Error, %s" %ex, end=', ')
     
     def find(self, data):
         count = 0
