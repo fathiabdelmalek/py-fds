@@ -1,10 +1,17 @@
-from . import Stack
+from .stack import Stack
 
 
 class _Node:
     def __init__(self, data=None, next=None):
         self.data = data
         self.next = next
+
+
+def change(node1, node2):
+    bid = node1.data
+    node1.data = node2.data
+    node2.data = bid
+    del bid
 
 
 class Queue:
@@ -85,6 +92,18 @@ class Queue:
             self.enqueue(stck.pop())
         return self
     
+    def sort(self):
+        tmp1 = self.__front
+        tmp2 = tmp1.next
+        while tmp1.next is not None:
+            while tmp2 is not None:
+                if tmp1.data > tmp2.data:
+                    change(tmp1, tmp2)
+                tmp2 = tmp2.next
+            tmp1 = tmp1.next
+            tmp2 = tmp1.next
+        del tmp1, tmp2
+
     def exchange(self, n):
         for i in range(n):
             self.enqueue(self.dequeue())

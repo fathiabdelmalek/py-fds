@@ -77,6 +77,7 @@ Simple implementaion of data structures __(DS)__ for python
 - clear(self) // TODO: clear the __DS__
 - find(self, data) // TODO: return the number of how many the entered data found in the __DS__
 - reverse(self) // TODO: return the reverse of the __DS__
+- sort(self) // TODO: sort the __DS__ if its not sorted
 - exchange(self, n) // TODO: circular permutation for n time
 
 ### classmethods for all DSs

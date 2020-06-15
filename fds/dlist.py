@@ -6,6 +6,13 @@ class _Node:
         self.prev = prev
 
 
+def change(node1, node2):
+    bid = node1.data
+    node1.data = node2.data
+    node2.data = bid
+    del bid
+
+
 class DList:
     def __init__(self):
         self.__head = None
@@ -167,6 +174,18 @@ class DList:
             prv = tmp
             tmp = nxt
         self.__head = prv
+
+    def sort(self):
+        tmp1 = self.__head
+        tmp2 = tmp1.next
+        while tmp1.next is not None:
+            while tmp2 is not None:
+                if tmp1.data > tmp2.data:
+                    change(tmp1, tmp2)
+                tmp2 = tmp2.next
+            tmp1 = tmp1.next
+            tmp2 = tmp1.next
+        del tmp1, tmp2
 
     def exchange(self, n):
         for i in range(n):
