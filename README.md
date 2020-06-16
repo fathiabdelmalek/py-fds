@@ -6,6 +6,7 @@ Simple implementaion of data structures __(DS)__ for python
 
 - linked list
 - doubly linked list
+- sorted linked list
 - stack
 - queue
 
@@ -13,6 +14,7 @@ Simple implementaion of data structures __(DS)__ for python
 
 - List // linked list
 - DList // doubly linked list
+- SList // sorted linked list
 - Stack // stack
 - Queue // queue
 
@@ -45,6 +47,23 @@ Simple implementaion of data structures __(DS)__ for python
 - add_fin(self, data) // TODO: add a node to the fin
 - delete(self, data) // TODO: delete all nodes hav the entered data
 - remove(self, pos=0) // TODO: return and remove node in the entered position (pos=0 => remove first node, pos=-1 => remove last node)
+
+### SList
+
+#### Properties
+
+- first // TODO: return the data in the first node
+- last // TODO: return the data in the last node
+
+#### Methodes
+
+- append(self, data) // TODO: add a node to the list in a sorted way
+- delete(self, data) // TODO: delete all nodes hav the entered data
+- remove(self, pos=0) // TODO: return and remove node in the entered position (pos=0 => remove first node, pos=-1 => remove last node)
+
+#### Note
+
+- the (reverse, sort, exchange) are not supported in this __DS__ because they brake the rule of the __Sorted Linked List__
 
 ### Stack
 
