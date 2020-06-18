@@ -1,4 +1,4 @@
-from .stack import Stack
+from fds.stack import Stack
 
 
 class _Node:
@@ -14,7 +14,7 @@ def change(node1, node2):
     del bid
 
 
-class Queue(object):
+class PQueue:
     def __init__(self):
         self.__front = None
         self.__back = None
@@ -36,7 +36,7 @@ class Queue(object):
             size += 1
             tmp = tmp.next
         return size
-    
+
     @property
     def front(self):
         try:
@@ -65,8 +65,21 @@ class Queue(object):
         if self.empty():
             self.__front = self.__back = node
         else:
-            self.__back.next = node
-            self.__back = node
+            if self.__front.data > data:
+                node.next = self.__front
+                self.__front = node
+            elif self.__back.data < data:
+                self.__back.next = node
+                self.__back = node
+            else:
+                tmp = self.__front
+                while tmp.next and tmp.data < data:
+                    cur = tmp
+                    tmp = tmp.next
+                node.next = tmp
+                cur.next = node
+                if node.next is None:
+                    self.__back = node
 
     def dequeue(self):
         ptr = self.__front
@@ -91,7 +104,7 @@ class Queue(object):
         while not stck.empty():
             self.enqueue(stck.pop())
         return self
-    
+
     def sort(self):
         tmp1 = self.__front
         tmp2 = tmp1.next
@@ -111,7 +124,7 @@ class Queue(object):
     @classmethod
     def merge(cls, q1, q2):
         try:
-            que = Queue()
+            que = PQueue()
             tmp1 = q1.__front
             tmp2 = q2.__front
             while tmp1:
@@ -123,11 +136,11 @@ class Queue(object):
             del tmp1, tmp2
             return que
         except Exception as ex:
-            print("Error, %s" %ex)
+            print("Error, %s" % ex)
 
     @classmethod
     def swap(cls, q1, q2):
-        bid = Queue()
+        bid = PQueue()
         while not q1.empty():
             bid.enqueue(q1.dequeue())
         while not q2.empty():

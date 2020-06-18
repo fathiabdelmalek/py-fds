@@ -19,9 +19,9 @@ class List:
     def __str__(self):
         l = "List : ["
         tmp = self.__head
-        while tmp is not None:
+        while tmp:
             l += str(tmp.data)
-            if tmp.next is not None:
+            if tmp.next:
                 l += " -> "
             tmp = tmp.next
         return l + "]"
@@ -29,7 +29,7 @@ class List:
     def __len__(self):
         size = 0
         tmp = self.__head
-        while tmp is not None:
+        while tmp:
             tmp = tmp.next
             size += 1
         return size
@@ -45,7 +45,7 @@ class List:
     def last(self):
         try:
             tmp = self.__head
-            while tmp.next is not None:
+            while tmp.next:
                 tmp = tmp.next
             return tmp.data
         except Exception as ex:
@@ -72,7 +72,7 @@ class List:
         else:
             tmp = self.__head
             count = 0
-            while tmp is not None and count < pos:
+            while tmp and count < pos:
                 cur = tmp
                 tmp = tmp.next
                 count += 1
@@ -85,7 +85,7 @@ class List:
             self.__head = node
         else:
             tmp = self.__head
-            while tmp.next is not None:
+            while tmp.next:
                 tmp = tmp.next
             tmp.next = node
 
@@ -100,7 +100,7 @@ class List:
                 del ptr
                 return data
             elif pos == -1:
-                while tmp.next is not None:
+                while tmp.next:
                     cur = tmp
                     tmp = tmp.next
                 data = tmp.data
@@ -111,7 +111,7 @@ class List:
                 cur = tmp
                 tmp = tmp.next
                 count += 1
-            deta = tmp.data
+            data = tmp.data
             cur.next = tmp.next
             del tmp
             return data
@@ -126,7 +126,7 @@ class List:
                 del ptr
             cur = self.__head
             tmp = cur.next
-            while tmp is not None:
+            while tmp:
                 if tmp.data == data:
                     ptr = tmp
                     tmp = tmp.next
@@ -141,7 +141,7 @@ class List:
     def find(self, data):
         count = 0
         tmp = self.__head
-        while tmp is not None:
+        while tmp:
             if tmp.data == data:
                 count += 1
             tmp = tmp.next
@@ -151,7 +151,7 @@ class List:
         prv = None
         cur = self.__head
         nxt = cur.next
-        while cur is not None:
+        while cur:
             nxt = cur.next
             cur.next = prv
             prv = cur
@@ -161,8 +161,8 @@ class List:
     def sort(self):
         tmp1 = self.__head
         tmp2 = tmp1.next
-        while tmp1.next is not None:
-            while tmp2 is not None:
+        while tmp1.next:
+            while tmp2:
                 if tmp1.data > tmp2.data:
                     change(tmp1, tmp2)
                 tmp2 = tmp2.next
@@ -180,10 +180,10 @@ class List:
             lst = List()
             tmp1 = l1.__head
             tmp2 = l2.__head
-            while tmp1 is not None:
+            while tmp1:
                 lst.append(tmp1.data)
                 tmp1 = tmp1.next
-            while tmp2 is not None:
+            while tmp2:
                 lst.append(tmp2.data)
                 tmp2 = tmp2.next
             del tmp1, tmp2

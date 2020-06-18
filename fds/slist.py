@@ -18,9 +18,9 @@ class SList:
     def __str__(self):
         sl = "List : ["
         tmp = self.__head
-        while tmp is not None:
+        while tmp:
             sl += str(tmp.data)
-            if tmp.next is not None:
+            if tmp.next:
                 sl += ", "
             tmp = tmp.next
         return sl + ']'
@@ -28,7 +28,7 @@ class SList:
     def __len__(self):
         size = 0
         tmp = self.__head
-        while tmp is not None:
+        while tmp:
             tmp = tmp.next
             size += 1
         return size
@@ -44,7 +44,7 @@ class SList:
     def last(self):
         try:
             tmp = self.__head
-            while tmp.next is not None:
+            while tmp.next:
                 tmp = tmp.next
             return tmp.data
         except Exception as ex:
@@ -73,7 +73,7 @@ class SList:
             else:
                 tmp = self.__head
                 cur = None
-                while tmp.next is not None and data >= tmp.data:
+                while tmp.next and data >= tmp.data:
                     cur = tmp
                     tmp = tmp.next
                 if data < tmp.data:
@@ -95,7 +95,7 @@ class SList:
                 del ptr
                 return data
             elif pos == -1:
-                while tmp.next is not None:
+                while tmp.next:
                     cur = tmp
                     tmp = tmp.next
                 data = tmp.data
@@ -121,7 +121,7 @@ class SList:
                 del ptr
             cur = self.__head
             tmp = cur.next
-            while tmp is not None:
+            while tmp:
                 if tmp.data == data:
                     ptr = tmp
                     tmp = tmp.next
@@ -136,7 +136,7 @@ class SList:
     def find(self, data):
         count = 0
         tmp = self.__head
-        while tmp is not None:
+        while tmp:
             if tmp.data == data:
                 count += 1
             tmp = tmp.next
@@ -148,10 +148,10 @@ class SList:
             lst = SList()
             tmp1 = sl1.__head
             tmp2 = sl2.__head
-            while tmp1 is not None:
+            while tmp1:
                 lst.append(tmp1.data)
                 tmp1 = tmp1.next
-            while tmp2 is not None:
+            while tmp2:
                 lst.append(tmp2.data)
                 tmp2 = tmp2.next
             del tmp1, tmp2

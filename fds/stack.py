@@ -19,9 +19,9 @@ class Stack:
     def __str__(self):
         s = "Stack : ["
         tmp = self.__top
-        while tmp is not None:
+        while tmp:
             s += str(tmp.data)
-            if tmp.next is not None:
+            if tmp.next:
                 s += "\n         "
             tmp = tmp.next
         return s + "]"
@@ -29,7 +29,7 @@ class Stack:
     def __len__(self):
         size = 0
         tmp = self.__top
-        while tmp is not None:
+        while tmp:
             size += 1
             tmp = tmp.next
         return size
@@ -64,7 +64,7 @@ class Stack:
     def find(self, data):
         count = 0
         tmp = self.__top
-        while tmp is not None:
+        while tmp:
             if tmp.data == data:
                 count += 1
             tmp = tmp.next
@@ -79,8 +79,8 @@ class Stack:
     def sort(self):
         tmp1 = self.__top
         tmp2 = tmp1.next
-        while tmp1.next is not None:
-            while tmp2 is not None:
+        while tmp1.next:
+            while tmp2:
                 if tmp1.data > tmp2.data:
                     change(tmp1, tmp2)
                 tmp2 = tmp2.next
@@ -106,10 +106,10 @@ class Stack:
             stck = Stack()
             tmp1 = s1.__top
             tmp2 = s2.__top
-            while tmp1 is not None:
+            while tmp1:
                 stck.push(tmp1.data)
                 tmp1 = tmp1.next
-            while tmp2 is not None:
+            while tmp2:
                 stck.push(tmp2.data)
                 tmp2 = tmp2.next
             del tmp1, tmp2

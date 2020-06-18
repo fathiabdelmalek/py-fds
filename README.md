@@ -9,6 +9,7 @@ Simple implementaion of data structures __(DS)__ for python
 - sorted linked list
 - stack
 - queue
+- priority queue
 
 ## Classes
 
@@ -17,6 +18,7 @@ Simple implementaion of data structures __(DS)__ for python
 - SList // sorted linked list
 - Stack // stack
 - Queue // queue
+- PQueue // priority queue
 
 ## API
 
@@ -86,6 +88,18 @@ Simple implementaion of data structures __(DS)__ for python
 #### Methods
 
 - enqueue(self, data) // TODO: add a node to the end
+- dequeue(self) // TODO: return and remove the first element
+
+### PQueue
+
+#### Properties
+
+- front // TODO: return the data in the first node
+- back // TODO: return the data in the last node
+
+#### Methods
+
+- enqueue(self, data) // TODO: add a node to the queue in a sorted way
 - dequeue(self) // TODO: return and remove the first element
 
 ### Methods for all DSs

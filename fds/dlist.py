@@ -21,9 +21,9 @@ class DList:
     def __str__(self):
         l = "DList : ["
         tmp = self.__head
-        while tmp is not None:
+        while tmp:
             l += str(tmp.data)
-            if tmp.next is not None:
+            if tmp.next:
                 l += " <=> "
             tmp = tmp.next
         return l + "]"
@@ -31,7 +31,7 @@ class DList:
     def __len__(self):
         size = 0
         tmp = self.__head
-        while tmp is not None:
+        while tmp:
             tmp = tmp.next
             size += 1
         return size
@@ -90,7 +90,7 @@ class DList:
         else:
             tmp = self.__head
             count = 0
-            while tmp is not None and count < pos:
+            while tmp and count < pos:
                 cur = tmp
                 tmp = tmp.next
                 count += 1
@@ -110,7 +110,7 @@ class DList:
                 del ptr
                 return data
             elif pos == -1:
-                while tmp.next is not None:
+                while tmp.next:
                     cur = tmp
                     tmp = tmp.next
                 data = tmp.data
@@ -140,7 +140,7 @@ class DList:
                 del ptr
             cur = self.__head
             tmp = cur.next
-            while tmp is not None:
+            while tmp:
                 if tmp.data == data:
                     ptr = tmp
                     tmp = tmp.next
@@ -156,7 +156,7 @@ class DList:
     def find(self, data):
         count = 0
         tmp = self.__head
-        while tmp is not None:
+        while tmp:
             if tmp.data == data:
                 count += 1
             tmp = tmp.next
@@ -167,7 +167,7 @@ class DList:
         tmp = prv.next
         prv.next = None
         prv.prev = tmp
-        while tmp is not None:
+        while tmp:
             nxt = tmp.next
             tmp.next = prv
             tmp.prev = nxt
@@ -178,8 +178,8 @@ class DList:
     def sort(self):
         tmp1 = self.__head
         tmp2 = tmp1.next
-        while tmp1.next is not None:
-            while tmp2 is not None:
+        while tmp1.next:
+            while tmp2:
                 if tmp1.data > tmp2.data:
                     change(tmp1, tmp2)
                 tmp2 = tmp2.next
@@ -197,10 +197,10 @@ class DList:
             lst = DList()
             tmp1 = dl1.__head
             tmp2 = dl2.__head
-            while tmp1 is not None:
+            while tmp1:
                 lst.add_fin(tmp1.data)
                 tmp1 = tmp1.next
-            while tmp2 is not None:
+            while tmp2:
                 lst.add_fin(tmp2.data)
                 tmp2 = tmp2.next
             del tmp1, tmp2
