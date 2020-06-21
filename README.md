@@ -10,6 +10,21 @@ Simple implementaion of data structures __(DS)__ for python
 - stack
 - queue
 - priority queue
+* __utils__ // (package)
+
+### Content of utils
+
+- node // single pointer node
+- dnode // double pointer node
+- pair
+
+### how to import utils
+
+`from fds.utils import *`\
+`pair = Pair()`\
+or\
+`import fds.utils`\
+`pair = utils.Pair()`
 
 ## Classes
 

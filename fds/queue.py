@@ -1,10 +1,5 @@
 from .stack import Stack
-
-
-class _Node:
-    def __init__(self, data=None, next=None):
-        self.data = data
-        self.next = next
+from .utils.node import Node
 
 
 def change(node1, node2):
@@ -61,7 +56,7 @@ class Queue(object):
             del ptr
 
     def enqueue(self, data):
-        node = _Node(data)
+        node = Node(data)
         if self.empty():
             self.__front = self.__back = node
         else:

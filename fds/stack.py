@@ -1,8 +1,4 @@
-
-class _Node:
-    def __init__(self, data=None, next=None):
-        self.data = data
-        self.next = next
+from .utils.node import Node
 
 
 def change(node1, node2):
@@ -51,7 +47,7 @@ class Stack:
             del ptr
 
     def push(self, data):
-        node = _Node(data, self.__top)
+        node = Node(data, self.__top)
         self.__top = node
 
     def pop(self):

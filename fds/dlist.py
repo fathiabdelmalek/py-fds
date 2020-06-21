@@ -1,9 +1,4 @@
-
-class _Node:
-    def __init__(self, data=None, next=None, prev=None):
-        self.data = data
-        self.next = next
-        self.prev = prev
+from .utils.dnode import Node
 
 
 def change(node1, node2):
@@ -60,7 +55,7 @@ class DList:
             del ptr
     
     def add_begin(self, data):
-        node = _Node(data)
+        node = Node(data)
         if self.empty():
             self.__head = self.__tail = node
         else:
@@ -69,7 +64,7 @@ class DList:
             self.__head = node
 
     def add_fin(self, data):
-        node = _Node(data)
+        node = Node(data)
         if self.empty():
             self.__head=  self.__tail = node
         else:
@@ -78,7 +73,7 @@ class DList:
             self.__tail = node
 
     def insert(self, data, pos=0):
-        node = _Node(data)
+        node = Node(data)
         if self.empty():
             self.__head = self.__tail = node
         elif pos == 0:

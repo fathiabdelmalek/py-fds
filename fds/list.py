@@ -1,8 +1,4 @@
-
-class _Node:
-    def __init__(self, data=None, next=None):
-        self.data = data
-        self.next = next
+from .utils.node import Node
 
 
 def change(node1, node2):
@@ -61,7 +57,7 @@ class List:
             del ptr
 
     def insert(self, data, pos=0):
-        node = _Node(data)
+        node = Node(data)
         if self.empty():
             self.__head = node
         elif pos == 0:
@@ -80,7 +76,7 @@ class List:
             node.next = tmp
         
     def append(self, data):
-        node = _Node(data)
+        node = Node(data)
         if self.empty():
             self.__head = node
         else:
