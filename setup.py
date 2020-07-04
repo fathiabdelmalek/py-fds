@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 from setuptools import setup
 
 with open("README.md", "r") as fh:
@@ -19,3 +20,26 @@ setup(
         "Operating System :: OS Independent",
     ]
 )
+=======
+from setuptools import setup
+
+with open("README.md", "r") as fh:
+    long_description = fh.read()
+
+setup(
+    name="py-fds",
+    version="3.1.1",
+    author="Abdelmalek Fathi",
+    author_email="fathiabdelmalek0666006253@gmail.com",
+    url="https://github.com/FathiMalek/py-fds.git",
+    description="Simple implementation of data structures for python",
+    long_description=long_description,
+    long_description_content_type="text/markdown",
+    packages=['pyfds', 'pyfds.utils'],
+    classifiers=[
+        "Programming Language :: Python :: 3",
+        "License :: OSI Approved :: MIT License",
+        "Operating System :: OS Independent",
+    ]
+)
+>>>>>>> 2730e0fde71349cb986f5d5e58c6783c140a7630
