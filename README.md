@@ -1,4 +1,4 @@
-# fds
+# pyfds
 
 Simple implementaion of data structures __(DS)__ for python
 
@@ -20,10 +20,10 @@ Simple implementaion of data structures __(DS)__ for python
 
 ### how to import utils
 
-`from fds.utils import *`\
+`from pyfds.utils import *`\
 `pair = Pair()`\
 or\
-`import fds.utils`\
+`import pyfds.utils`\
 `pair = utils.Pair()`
 
 ## Classes

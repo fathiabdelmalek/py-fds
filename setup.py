@@ -5,14 +5,14 @@ with open("README.md", "r") as fh:
 
 setup(
     name="py-fds",
-    version="3.0.0",
+    version="3.1.1",
     author="Abdelmalek Fathi",
     author_email="fathiabdelmalek0666006253@gmail.com",
     url="https://github.com/FathiMalek/py-fds.git",
     description="Simple implementation of data structures for python",
     long_description=long_description,
     long_description_content_type="text/markdown",
-    packages=['fds', 'fds.utils'],
+    packages=['pyfds', 'pyfds.utils'],
     classifiers=[
         "Programming Language :: Python :: 3",
         "License :: OSI Approved :: MIT License",
