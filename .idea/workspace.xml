@@ -19,17 +19,7 @@
     <select />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="69795da7-2c5d-4ccf-911c-c8619e472d99" name="Default Changelist" comment="">
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/fds/dlist.py" beforeDir="false" afterPath="$PROJECT_DIR$/fds/dlist.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/fds/list.py" beforeDir="false" afterPath="$PROJECT_DIR$/fds/list.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/fds/pqueue.py" beforeDir="false" afterPath="$PROJECT_DIR$/fds/pqueue.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/fds/queue.py" beforeDir="false" afterPath="$PROJECT_DIR$/fds/queue.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/fds/slist.py" beforeDir="false" afterPath="$PROJECT_DIR$/fds/slist.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/fds/stack.py" beforeDir="false" afterPath="$PROJECT_DIR$/fds/stack.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/fds/utils/__init__.py" beforeDir="false" afterPath="$PROJECT_DIR$/fds/utils/__init__.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/setup.py" beforeDir="false" afterPath="$PROJECT_DIR$/setup.py" afterDir="false" />
-    </list>
+    <list default="true" id="69795da7-2c5d-4ccf-911c-c8619e472d99" name="Default Changelist" comment="" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -205,6 +195,7 @@
       <workItem from="1593659814905" duration="2877000" />
       <workItem from="1593692300700" duration="180000" />
       <workItem from="1593825497143" duration="4873000" />
+      <workItem from="1593834969296" duration="144000" />
     </task>
     <servers />
   </component>
