@@ -1,4 +1,3 @@
-<<<<<<< HEAD
 # pyfds
 
 Simple implementaion of data structures __(DS)__ for python
@@ -11,12 +10,14 @@ Simple implementaion of data structures __(DS)__ for python
 - stack
 - queue
 - priority queue
+- binary search tree
 * __utils__ // (package)
 
 ### Content of utils
 
 - node // single pointer node
 - dnode // double pointer node
+- tnode // tree pointer node
 - pair
 
 ### how to import utils
@@ -35,6 +36,7 @@ or\
 - Stack // stack
 - Queue // queue
 - PQueue // priority queue
+- BST // binary search tree
 
 ## API
 
@@ -259,7 +261,29 @@ or\
 - enqueue(self, data) // TODO: add a node to the queue in a sorted way
 - dequeue(self) // TODO: return and remove the first element
 
-### Methods for all DSs
+### BST
+
+#### Properties
+
+- number_of_nodes // TODO: return the number total of the nodes in the __DS__
+- min // TODO: return the min of the __DS__
+- max // TODO: return the max of the __DS__
+
+#### Methods
+
+- empty(self) // TODO: return True if the __DS__ is empty
+- clear(self) // TODO: clear the __DS__
+- pre_order(self) // TODO: show the __DS__ in pre order
+- in_order(self) // TODO: show the __DS__ in in order
+- post_order(self) // TODO: show the __DS__ in post order
+- append(self, data) // TODO: append a new node to the __DS__
+- find(self, data) // TODO: return the number of how many the entered data found in the __DS__
+- parent(self, data) // TODO: return parent node of the element // Note: its return the node not the data
+- predecessor(self, data) // TODO: return the predecessor of the element // Note: its return the node not the data
+- successor(self, data) // TODO: return the successor of the element // Note: its return the node not the data
+- delete(self, data) // TODO: delete the node of the element from the __DS__ and replace it with successor
+
+### Methods for all DSs except bst
 
 - __str__(self) // USE: print([DS_name]) // TODO: display the __DS__
 - __len__(self) // USE: len([DS_name]) // TODO: return the lenth of the __DS__
@@ -270,7 +294,7 @@ or\
 - sort(self) // TODO: sort the __DS__ if its not sorted
 - exchange(self, n) // TODO: circular permutation for n time
 
-### classmethods for all DSs
+### classmethods for all DSs except bst
 
 // USE: [DS] = [DS_type].method([DS1], [DS2])</br>
 // Examples:</br>
@@ -280,4 +304,3 @@ __the tow DS parameters must be from the same DS__
 
 - merge(cls, DS1, DS2) // TODO: return the merge of two DS in new DS
 - swap(cls, DS1, DS2) // TODO: swap between DS1 and DS2 (DS1 will be DS2 and DS2 will be DS1)
->>>>>>> 2730e0fde71349cb986f5d5e58c6783c140a7630
