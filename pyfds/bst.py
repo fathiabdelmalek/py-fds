@@ -5,6 +5,7 @@ class BST:
     def __init__(self):
         self.__root = None
         self.__number_of_nodes = 0
+        self.__number_of_liefs = 0
 
     def __gototarget(self, tmp, data):
         while tmp:
@@ -44,20 +45,7 @@ class BST:
             tmp = tmp.right
         return tmp
 
-    def empty(self):
-        return self.__root is None
-
-    def clear(self):
-        def _clear(root):
-            if root:
-                _clear(root.right)
-                _clear(root.left)
-                root.right = None
-                root.left = None
-                del root
-        _clear(self.__root)
-        self.__root = None
-
+    @property
     def pre_order(self):
         def _pre_order(tmp):
             if tmp:
@@ -68,6 +56,7 @@ class BST:
         if self.__root:
             print("end")
 
+    @property
     def in_order(self):
         def _pre_order(tmp):
             if tmp:
@@ -78,6 +67,7 @@ class BST:
         if self.__root:
             print("end")
 
+    @property
     def post_order(self):
         def _pre_order(tmp):
             if tmp:
@@ -97,6 +87,27 @@ class BST:
         self.__number_of_nodes += num
 
     @property
+    def number_of_liefs(self):
+        def _number_of_liefs(root):
+            if root is None:
+                return 0
+            else:
+                if root.left is None and root.right is None:
+                    return 1
+                else:
+                    return _number_of_liefs(root.left) + _number_of_liefs(root.right)
+        return _number_of_liefs(self.__root)
+
+    @property
+    def height(self):
+        def _height(root):
+            if root is None:
+                return 0
+            else:
+                return 1 + max(_height(root.left), _height(root.right))
+        return _height(self.__root)
+
+    @property
     def max(self):
         root = self.__root
         while root.right:
@@ -109,6 +120,20 @@ class BST:
         while root.left:
             root = root.left
         return root.data
+
+    def empty(self):
+        return self.__root is None
+
+    def clear(self):
+        def _clear(root):
+            if root:
+                _clear(root.right)
+                _clear(root.left)
+                root.right = None
+                root.left = None
+                del root
+        _clear(self.__root)
+        self.__root = None
 
     def append(self, data):
         node = Node(data)
@@ -207,3 +232,15 @@ class BST:
             self.__number_of_nodes -= 1
             return d
         return None
+
+    @classmethod
+    def equals(cls, bst1, bst2):
+        def _equals(bst1, bst2):
+            if bst1 is None and bst2 is None:
+                return True
+            else:
+                if bst1 is None or bst2 is None:
+                    return False
+                else:
+                    return (bst1.data == bst2.data) and (_equals(bst1.right, bst2.right)) and (_equals(bst1.left, bst2.left))
+        return _equals(bst1.__root, bst2.__root)
