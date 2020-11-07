@@ -1,6 +1,6 @@
-from .stack import Stack
-from .utils import change
-from .utils.node import Node
+from pyfds.stack import Stack
+from pyfds.utils import change
+from pyfds.utils.node import Node
 
 
 class Queue(object):
