@@ -1,6 +1,6 @@
-from pyfds.stack import Stack
-from pyfds.utils import change
-from pyfds.utils.node import Node
+from .stack import Stack
+from .utils import change
+from .utils.node import Node
 
 
 class Queue(object):
@@ -76,7 +76,7 @@ class Queue(object):
     def reverse(self):
         stck = Stack()
         while not self.empty():
-            stck.push(self.enqueue())
+            stck.push(self.dequeue())
         while not stck.empty():
             self.enqueue(stck.pop())
         return self

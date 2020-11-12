@@ -5,7 +5,7 @@ with open("README.md", "r") as fh:
 
 setup(
     name="py-fds",
-    version="3.4.0",
+    version="3.4.1",
     author="Abdelmalek Fathi",
     author_email="fathiabdelmalek0666006253@gmail.com",
     url="https://github.com/FathiMalek/py-fds.git",
