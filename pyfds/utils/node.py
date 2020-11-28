@@ -18,3 +18,12 @@ class Node:
     @next.setter
     def next(self, ptr):
         self.__next = ptr
+
+
+def equals(node1, node2):
+    if node1 is None and node2 is None:
+        return True
+    elif node1 is None or node2 is None:
+        return False
+    else:
+        return (node1.data == node2.data) and (equals(node1.next, node2.next))

@@ -19,7 +19,23 @@
     <select />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="69795da7-2c5d-4ccf-911c-c8619e472d99" name="Default Changelist" comment="" />
+    <list default="true" id="69795da7-2c5d-4ccf-911c-c8619e472d99" name="Default Changelist" comment="">
+      <change afterPath="$PROJECT_DIR$/.idea/aws.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/README.md" beforeDir="false" afterPath="$PROJECT_DIR$/README.md" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/pyfds/bst.py" beforeDir="false" afterPath="$PROJECT_DIR$/pyfds/bst.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/pyfds/dlist.py" beforeDir="false" afterPath="$PROJECT_DIR$/pyfds/dlist.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/pyfds/list.py" beforeDir="false" afterPath="$PROJECT_DIR$/pyfds/list.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/pyfds/pqueue.py" beforeDir="false" afterPath="$PROJECT_DIR$/pyfds/pqueue.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/pyfds/queue.py" beforeDir="false" afterPath="$PROJECT_DIR$/pyfds/queue.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/pyfds/slist.py" beforeDir="false" afterPath="$PROJECT_DIR$/pyfds/slist.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/pyfds/stack.py" beforeDir="false" afterPath="$PROJECT_DIR$/pyfds/stack.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/pyfds/utils/dnode.py" beforeDir="false" afterPath="$PROJECT_DIR$/pyfds/utils/dnode.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/pyfds/utils/node.py" beforeDir="false" afterPath="$PROJECT_DIR$/pyfds/utils/node.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/pyfds/utils/pair.py" beforeDir="false" afterPath="$PROJECT_DIR$/pyfds/utils/pair.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/pyfds/utils/tnode.py" beforeDir="false" afterPath="$PROJECT_DIR$/pyfds/utils/tnode.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/setup.py" beforeDir="false" afterPath="$PROJECT_DIR$/setup.py" afterDir="false" />
+    </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -44,6 +60,7 @@
   <component name="PropertiesComponent">
     <property name="RunOnceActivity.OpenProjectViewOnStart" value="true" />
     <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
+    <property name="SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="last_opened_file_path" value="$PROJECT_DIR$" />
     <property name="node.js.detected.package.eslint" value="true" />
@@ -175,6 +192,7 @@
       </list>
     </recent_temporary>
   </component>
+  <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
   <component name="SvnConfiguration">
     <configuration />
   </component>
@@ -272,15 +290,5 @@
     </state>
     <state x="415" y="148" width="672" height="469" key="search.everywhere.popup/0.0.1280.680@0.0.1280.680" timestamp="1593636178603" />
     <state x="623" y="242" width="672" height="678" key="search.everywhere.popup/0.27.1920.985@0.27.1920.985" timestamp="1592489222950" />
-  </component>
-  <component name="com.intellij.coverage.CoverageDataManagerImpl">
-    <SUITE FILE_PATH="coverage/py_fds$tnode.coverage" NAME="tnode Coverage Results" MODIFIED="1593662325040" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/fds/utils" />
-    <SUITE FILE_PATH="coverage/py_fds$bst.coverage" NAME="bst Coverage Results" MODIFIED="1593830006887" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/fds" />
-    <SUITE FILE_PATH="coverage/py_fds$pair__1_.coverage" NAME="pair (1) Coverage Results" MODIFIED="1592753016729" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/fds/utils" />
-    <SUITE FILE_PATH="coverage/py_fds$pair.coverage" NAME="pair Coverage Results" MODIFIED="1592752803674" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/fds" />
-    <SUITE FILE_PATH="coverage/py_fds$queue.coverage" NAME="queue Coverage Results" MODIFIED="1592494739635" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/fds" />
-    <SUITE FILE_PATH="coverage/py_fds$dlist.coverage" NAME="dlist Coverage Results" MODIFIED="1592753171884" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/fds" />
-    <SUITE FILE_PATH="coverage/py_fds$list.coverage" NAME="list Coverage Results" MODIFIED="1593830203370" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/fds" />
-    <SUITE FILE_PATH="coverage/py_fds$pqueue.coverage" NAME="pqueue Coverage Results" MODIFIED="1592495079750" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/fds" />
   </component>
 </project>

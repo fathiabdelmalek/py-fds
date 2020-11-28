@@ -1,4 +1,4 @@
-from pyfds.utils.tnode import Node
+from pyfds.utils.tnode import Node, equals as node_equals
 
 
 class BST:
@@ -46,39 +46,6 @@ class BST:
         return tmp
 
     @property
-    def pre_order(self):
-        def _pre_order(tmp):
-            if tmp:
-                print(tmp.data, end=', ')
-                _pre_order(tmp.left)
-                _pre_order(tmp.right)
-        _pre_order(self.__root)
-        if self.__root:
-            print("end")
-
-    @property
-    def in_order(self):
-        def _pre_order(tmp):
-            if tmp:
-                _pre_order(tmp.left)
-                print(tmp.data, end=', ')
-                _pre_order(tmp.right)
-        _pre_order(self.__root)
-        if self.__root:
-            print("end")
-
-    @property
-    def post_order(self):
-        def _pre_order(tmp):
-            if tmp:
-                _pre_order(tmp.left)
-                _pre_order(tmp.right)
-                print(tmp.data, end=', ')
-        _pre_order(self.__root)
-        if self.__root:
-            print("end")
-
-    @property
     def number_of_nodes(self):
         return self.__number_of_nodes
 
@@ -120,6 +87,36 @@ class BST:
         while root.left:
             root = root.left
         return root.data
+
+    def pre_order(self):
+        def _pre_order(tmp):
+            if tmp:
+                print(tmp.data, end=', ')
+                _pre_order(tmp.left)
+                _pre_order(tmp.right)
+        _pre_order(self.__root)
+        if self.__root:
+            print("end")
+
+    def in_order(self):
+        def _pre_order(tmp):
+            if tmp:
+                _pre_order(tmp.left)
+                print(tmp.data, end=', ')
+                _pre_order(tmp.right)
+        _pre_order(self.__root)
+        if self.__root:
+            print("end")
+
+    def post_order(self):
+        def _pre_order(tmp):
+            if tmp:
+                _pre_order(tmp.left)
+                _pre_order(tmp.right)
+                print(tmp.data, end=', ')
+        _pre_order(self.__root)
+        if self.__root:
+            print("end")
 
     def empty(self):
         return self.__root is None
@@ -233,14 +230,5 @@ class BST:
             return d
         return None
 
-    @classmethod
-    def equals(cls, bst1, bst2):
-        def _equals(bst1, bst2):
-            if bst1 is None and bst2 is None:
-                return True
-            else:
-                if bst1 is None or bst2 is None:
-                    return False
-                else:
-                    return (bst1.data == bst2.data) and (_equals(bst1.right, bst2.right)) and (_equals(bst1.left, bst2.left))
-        return _equals(bst1.__root, bst2.__root)
+    def equals(self, bst):
+        return node_equals(self.__root, bst.__root)

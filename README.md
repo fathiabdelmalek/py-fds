@@ -130,6 +130,7 @@ or\
 - reverse() // TODO: return the reverse of the __DS__
 - sort() // TODO: sort the __DS__ if its not sorted
 - exchange(n) // TODO: circular permutation for n time
+- equals(DS) // TODO: return True if `DS` is equal to __this DS__
 
 ### classmethods for all DSs
 
@@ -138,17 +139,13 @@ or\
 `stck3 = Stack.merge(stck1, stck2)`<br>
 `Stack.swap([DS1], [DS2])`<br>
 __the tow DS parameters must be from the same DS__
-
-- merge(DS1, DS2) // TODO: return the merge of two DS in new DS
-- swap(DS1, DS2) // TODO: swap between DS1 and DS2 (DS1 will be DS2 and DS2 will be DS1)
+- merge(DS1, DS2) // TODO: return the merge of two __DSs__ in new __DS__
+- swap(DS1, DS2) // TODO: swap between DS1 and DS2 (`DS1` will be `DS2` and `DS2` will be `DS1`)
 
 ### BST
 
 #### properties
 
-- pre_order // TODO: represent the __BST__ in pre_order way
-- in_order // TODO: represent the __BST__ in in_order way
-- post_order // TODO: represent the __BST__ in post_order way
 - number_of_nodes // TODO: return the number of nodes in the __BST__
 - number_of_liefs // TODO: return the number of liefs (nodes without any children) in the __BST__
 - height // TODO: return the height of the __BST__
@@ -157,13 +154,13 @@ __the tow DS parameters must be from the same DS__
 
 #### methodes
 
+- pre_order() // TODO: represent the __BST__ in pre_order way
+- in_order() // TODO: represent the __BST__ in in_order way
+- post_order() // TODO: represent the __BST__ in post_order way
 - append(data) // TODO: append a new node to the __BST__ if not exist
 - find(data) // TODO: search for an element in the __BST__ and return it if exist 
 - parent(data) // TODO: return the parent node of an element if exist
 - successor(data) // TODO: return the next value in the __BST__ if exist
 - predecessor(data) // TODO: return the previous value in the __BST__ if exist
-- delete(data) // TODO: delete an element from the __BST__ if exist 
-
-#### classmethodes
-
-- equals(bst1, bst2) // TODO: return True if bst1 is equal to bst2 (bst1 is the same as bst2)
+- delete(data) // TODO: delete an element from the __BST__ if exist
+- equals(bst) // TODO: return True if `bst` is equal to __this BST__ (__this BST__ is the  same as `bst`)

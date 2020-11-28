@@ -1,5 +1,5 @@
 from .utils import change
-from .utils.dnode import Node
+from .utils.dnode import Node, equals as node_equals
 
 
 class DList:
@@ -8,7 +8,7 @@ class DList:
         self.__tail = None
 
     def __str__(self):
-        l = "DList : ["
+        l = "Doubled List : ["
         tmp = self.__head
         while tmp:
             l += str(tmp.data)
@@ -53,14 +53,14 @@ class DList:
         if self.empty():
             self.__head = self.__tail = node
         else:
-            node.next=  self.__head
+            node.next = self.__head
             self.__head.prev = node
             self.__head = node
 
     def add_fin(self, data):
         node = Node(data)
         if self.empty():
-            self.__head=  self.__tail = node
+            self.__head = self.__tail = node
         else:
             node.prev = self.__tail
             self.__tail.next = node
@@ -179,6 +179,9 @@ class DList:
     def exchange(self, n):
         for i in range(n):
             self.add_fin(self.remove())
+
+    def equals(self, lst):
+        return node_equals(self.__head, lst.__head)
 
     @classmethod
     def merge(cls, dl1, dl2):

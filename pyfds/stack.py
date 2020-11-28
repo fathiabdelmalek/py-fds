@@ -1,5 +1,5 @@
 from .utils import change
-from .utils.node import Node
+from .utils.node import Node, equals as node_equals
 
 
 class Stack:
@@ -89,6 +89,9 @@ class Stack:
             self.push(bid1.pop())
         while not bid2.empty():
             self.push(bid2.pop())
+
+    def equals(self, stck):
+        return node_equals(self.__top, stck.__top)
 
     @classmethod
     def merge(cls, s1, s2):

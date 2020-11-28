@@ -1,6 +1,6 @@
 from .stack import Stack
 from .utils import change
-from .utils.node import Node
+from .utils.node import Node, equals as node_equals
 
 
 class PQueue:
@@ -9,7 +9,7 @@ class PQueue:
         self.__back = None
 
     def __str__(self):
-        q = "Queue : ["
+        q = "Priority Queue : ["
         tmp = self.__front
         while tmp:
             q += str(tmp.data)
@@ -109,6 +109,9 @@ class PQueue:
     def exchange(self, n):
         for i in range(n):
             self.enqueue(self.dequeue())
+
+    def equals(self, pqueue):
+        return node_equals(self.__front, pqueue.__front)
 
     @classmethod
     def merge(cls, q1, q2):

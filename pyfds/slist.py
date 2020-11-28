@@ -1,4 +1,4 @@
-from .utils.node import Node
+from .utils.node import Node, equals as node_equals
 
 
 class SList:
@@ -6,7 +6,7 @@ class SList:
         self.__head = None
     
     def __str__(self):
-        sl = "List : ["
+        sl = "Sorted List : ["
         tmp = self.__head
         while tmp:
             sl += str(tmp.data)
@@ -131,6 +131,9 @@ class SList:
                 count += 1
             tmp = tmp.next
         return count
+
+    def equals(self, lst):
+        return node_equals(self.__head, lst.__head)
 
     @classmethod
     def merge(cls, sl1, sl2):

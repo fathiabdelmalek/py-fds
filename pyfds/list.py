@@ -1,5 +1,5 @@
 from .utils import change
-from .utils.node import Node
+from .utils.node import Node, equals as node_equals
 
 
 class List:
@@ -7,7 +7,7 @@ class List:
         self.__head = None
 
     def __str__(self):
-        l = "List : ["
+        l = "Single List : ["
         tmp = self.__head
         while tmp:
             l += str(tmp.data)
@@ -164,6 +164,9 @@ class List:
         for i in range(n):
             self.append(self.remove())
 
+    def equals(self, lst):
+        return node_equals(self.__head, lst.__head)
+
     @classmethod
     def merge(cls, l1, l2):
         try:
@@ -179,7 +182,7 @@ class List:
             del tmp1, tmp2
             return lst
         except Exception as ex:
-            print("Error, %s" %ex)
+            print("Error, %s" % ex)
 
     @classmethod
     def swap(cls, l1, l2):
