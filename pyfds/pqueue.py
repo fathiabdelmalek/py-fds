@@ -31,14 +31,14 @@ class PQueue:
         try:
             return self.__front.data
         except Exception as ex:
-            print("Error, %s" %ex, end=', ')
+            print("Error, %s" % ex, end=', ')
 
     @property
     def back(self):
         try:
             return self.__back.data
         except Exception as ex:
-            print("Error, %s" %ex, end=', ')
+            print("Error, %s" % ex, end=', ')
 
     def empty(self):
         return self.__front is None

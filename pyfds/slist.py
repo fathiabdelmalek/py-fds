@@ -4,7 +4,7 @@ from .utils.node import Node, equals as node_equals
 class SList:
     def __init__(self):
         self.__head = None
-    
+
     def __str__(self):
         sl = "Sorted List : ["
         tmp = self.__head
@@ -28,7 +28,7 @@ class SList:
         try:
             return self.__head.data
         except Exception as ex:
-            print("Error, %s" %ex, end=', ')
+            print("Error, %s" % ex, end=', ')
 
     @property
     def last(self):
@@ -38,8 +38,8 @@ class SList:
                 tmp = tmp.next
             return tmp.data
         except Exception as ex:
-            print("Error, %s" %ex, end=', ')
-    
+            print("Error, %s" % ex, end=', ')
+
     def empty(self):
         return self.__head is None
 
@@ -101,7 +101,7 @@ class SList:
             del tmp
             return data
         except Exception as ex:
-            print("Error, %s" %ex)
+            print("Error, %s" % ex)
 
     def delete(self, data):
         try:
@@ -121,7 +121,7 @@ class SList:
                     cur = tmp
                     tmp = tmp.next
         except Exception as ex:
-            print("Error, %s" %ex)
+            print("Error, %s" % ex)
 
     def find(self, data):
         count = 0
@@ -150,7 +150,7 @@ class SList:
             del tmp1, tmp2
             return lst
         except Exception as ex:
-            print("Error, %s" %ex)
+            print("Error, %s" % ex)
 
     @classmethod
     def swap(cls, sl1, sl2):

@@ -33,7 +33,7 @@ class Node:
         try:
             assert node.data != cur.data
         except Exception:
-            raise Exception("this number is already exist")
+            raise Exception("this number { %s } is already exist in the tree" % node.data)
         if node.data < cur.data:
             if cur.left is None:
                 cur.left = node

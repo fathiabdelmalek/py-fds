@@ -5,9 +5,9 @@ with open("README.md", "r") as fh:
 
 setup(
     name="py-fds",
-    version="3.5.0",
+    version="3.5.1",
     author="Abdelmalek Fathi",
-    author_email="fathiabdelmalek0666006253@gmail.com",
+    author_email="abdelmalek.fathi.2001@gmail.com",
     url="https://github.com/FathiMalek/py-fds.git",
     description="Simple implementation of data structures for python",
     long_description=long_description,

@@ -30,14 +30,14 @@ class DList:
         try:
             return self.__head.data
         except Exception as ex:
-            print("Error, %s" %ex, end=', ')
+            print("Error, %s" % ex, end=', ')
 
     @property
     def last(self):
         try:
             return self.__tail.data
         except Exception as ex:
-            print("Error, %s" %ex, end=', ')
+            print("Error, %s" % ex, end=', ')
 
     def empty(self):
         return self.__head is None
@@ -47,7 +47,7 @@ class DList:
             ptr = self.__head
             self.__head = self.__head.next
             del ptr
-    
+
     def add_begin(self, data):
         node = Node(data)
         if self.empty():
@@ -95,7 +95,7 @@ class DList:
                 ptr = self.__head
                 data = self.__head.data
                 self.__head = self.__head.next
-                self.__head.prev= None
+                self.__head.prev = None
                 del ptr
                 return data
             elif pos == -1:
@@ -118,8 +118,8 @@ class DList:
             del tmp
             return data
         except Exception as ex:
-            print("Error, %s" %ex)
-    
+            print("Error, %s" % ex)
+
     def delete(self, data):
         try:
             while self.__head.data == data:
@@ -140,8 +140,8 @@ class DList:
                     tmp = tmp.next
             self.__tail = cur
         except Exception as ex:
-            print("Error, %s" %ex)
-    
+            print("Error, %s" % ex)
+
     def find(self, data):
         count = 0
         tmp = self.__head
@@ -198,7 +198,7 @@ class DList:
             del tmp1, tmp2
             return lst
         except Exception as ex:
-            print("Error, %s" %ex)
+            print("Error, %s" % ex)
 
     @classmethod
     def swap(cls, dl1, dl2):

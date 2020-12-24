@@ -19,20 +19,12 @@
     <select />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="69795da7-2c5d-4ccf-911c-c8619e472d99" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/.idea/aws.xml" afterDir="false" />
+    <list default="true" id="69795da7-2c5d-4ccf-911c-c8619e472d99" name="Default Changelist" comment="add equals methode to all DSs and Paire">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/README.md" beforeDir="false" afterPath="$PROJECT_DIR$/README.md" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/pyfds/bst.py" beforeDir="false" afterPath="$PROJECT_DIR$/pyfds/bst.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/pyfds/dlist.py" beforeDir="false" afterPath="$PROJECT_DIR$/pyfds/dlist.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/pyfds/list.py" beforeDir="false" afterPath="$PROJECT_DIR$/pyfds/list.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/pyfds/pqueue.py" beforeDir="false" afterPath="$PROJECT_DIR$/pyfds/pqueue.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/pyfds/queue.py" beforeDir="false" afterPath="$PROJECT_DIR$/pyfds/queue.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/pyfds/slist.py" beforeDir="false" afterPath="$PROJECT_DIR$/pyfds/slist.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/pyfds/stack.py" beforeDir="false" afterPath="$PROJECT_DIR$/pyfds/stack.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/pyfds/utils/dnode.py" beforeDir="false" afterPath="$PROJECT_DIR$/pyfds/utils/dnode.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/pyfds/utils/node.py" beforeDir="false" afterPath="$PROJECT_DIR$/pyfds/utils/node.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/pyfds/utils/pair.py" beforeDir="false" afterPath="$PROJECT_DIR$/pyfds/utils/pair.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/pyfds/utils/tnode.py" beforeDir="false" afterPath="$PROJECT_DIR$/pyfds/utils/tnode.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/setup.py" beforeDir="false" afterPath="$PROJECT_DIR$/setup.py" afterDir="false" />
     </list>
@@ -71,7 +63,29 @@
     <property name="node.js.selected.package.tslint" value="(autodetect)" />
     <property name="settings.editor.selected.configurable" value="preferences.general" />
   </component>
-  <component name="RunManager" selected="Python.list">
+  <component name="RunManager" selected="Python.bst (1)">
+    <configuration name="bst (1)" type="PythonConfigurationType" factoryName="Python" temporary="true" nameIsGenerated="true">
+      <module name="py-fds" />
+      <option name="INTERPRETER_OPTIONS" value="" />
+      <option name="PARENT_ENVS" value="true" />
+      <envs>
+        <env name="PYTHONUNBUFFERED" value="1" />
+      </envs>
+      <option name="SDK_HOME" value="" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/pyfds" />
+      <option name="IS_MODULE_SDK" value="true" />
+      <option name="ADD_CONTENT_ROOTS" value="true" />
+      <option name="ADD_SOURCE_ROOTS" value="true" />
+      <EXTENSION ID="PythonCoverageRunConfigurationExtension" runner="coverage.py" />
+      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/pyfds/bst.py" />
+      <option name="PARAMETERS" value="" />
+      <option name="SHOW_COMMAND_LINE" value="false" />
+      <option name="EMULATE_TERMINAL" value="false" />
+      <option name="MODULE_MODE" value="false" />
+      <option name="REDIRECT_INPUT" value="false" />
+      <option name="INPUT_FILE" value="" />
+      <method v="2" />
+    </configuration>
     <configuration name="bst" type="PythonConfigurationType" factoryName="Python" temporary="true" nameIsGenerated="true">
       <module name="py-fds" />
       <option name="INTERPRETER_OPTIONS" value="" />
@@ -138,28 +152,6 @@
       <option name="INPUT_FILE" value="" />
       <method v="2" />
     </configuration>
-    <configuration name="pair (1)" type="PythonConfigurationType" factoryName="Python" temporary="true" nameIsGenerated="true">
-      <module name="py-fds" />
-      <option name="INTERPRETER_OPTIONS" value="" />
-      <option name="PARENT_ENVS" value="true" />
-      <envs>
-        <env name="PYTHONUNBUFFERED" value="1" />
-      </envs>
-      <option name="SDK_HOME" value="" />
-      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/fds/utils" />
-      <option name="IS_MODULE_SDK" value="true" />
-      <option name="ADD_CONTENT_ROOTS" value="true" />
-      <option name="ADD_SOURCE_ROOTS" value="true" />
-      <EXTENSION ID="PythonCoverageRunConfigurationExtension" runner="coverage.py" />
-      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/fds/utils/pair.py" />
-      <option name="PARAMETERS" value="" />
-      <option name="SHOW_COMMAND_LINE" value="false" />
-      <option name="EMULATE_TERMINAL" value="false" />
-      <option name="MODULE_MODE" value="false" />
-      <option name="REDIRECT_INPUT" value="false" />
-      <option name="INPUT_FILE" value="" />
-      <method v="2" />
-    </configuration>
     <configuration name="tnode" type="PythonConfigurationType" factoryName="Python" temporary="true" nameIsGenerated="true">
       <module name="py-fds" />
       <option name="INTERPRETER_OPTIONS" value="" />
@@ -184,11 +176,11 @@
     </configuration>
     <recent_temporary>
       <list>
+        <item itemvalue="Python.bst (1)" />
         <item itemvalue="Python.list" />
         <item itemvalue="Python.bst" />
         <item itemvalue="Python.tnode" />
         <item itemvalue="Python.dlist" />
-        <item itemvalue="Python.pair (1)" />
       </list>
     </recent_temporary>
   </component>
@@ -214,11 +206,21 @@
       <workItem from="1593692300700" duration="180000" />
       <workItem from="1593825497143" duration="4873000" />
       <workItem from="1593834969296" duration="144000" />
+      <workItem from="1608763135136" duration="43000" />
+      <workItem from="1608765199337" duration="3783000" />
     </task>
+    <task id="LOCAL-00001" summary="add equals methode to all DSs and Paire">
+      <created>1606574476003</created>
+      <option name="number" value="00001" />
+      <option name="presentableId" value="LOCAL-00001" />
+      <option name="project" value="LOCAL" />
+      <updated>1606574476003</updated>
+    </task>
+    <option name="localTasksCounter" value="2" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
-    <option name="version" value="2" />
+    <option name="version" value="3" />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
     <option name="TAB_STATES">
@@ -232,63 +234,11 @@
     </option>
     <option name="oldMeFiltersMigrated" value="true" />
   </component>
-  <component name="WindowStateProjectService">
-    <state x="526" y="204" key="#Notifications" timestamp="1590189793453">
-      <screen x="0" y="0" width="1280" height="680" />
-    </state>
-    <state x="526" y="204" key="#Notifications/0.0.1280.680@0.0.1280.680" timestamp="1590189793453" />
-    <state x="693" y="268" width="524" height="509" key="#com.intellij.refactoring.safeDelete.UnsafeUsagesDialog" timestamp="1592752946483">
-      <screen x="0" y="27" width="1920" height="985" />
-    </state>
-    <state x="693" y="268" width="524" height="509" key="#com.intellij.refactoring.safeDelete.UnsafeUsagesDialog/0.27.1920.985@0.27.1920.985" timestamp="1592752946483" />
-    <state width="1237" height="204" key="GridCell.Tab.0.bottom" timestamp="1593830592846">
-      <screen x="0" y="0" width="1280" height="680" />
-    </state>
-    <state width="1237" height="204" key="GridCell.Tab.0.bottom/0.0.1280.680@0.0.1280.680" timestamp="1593830592846" />
-    <state width="1874" height="192" key="GridCell.Tab.0.bottom/0.27.1920.985@0.27.1920.985" timestamp="1592754259979" />
-    <state width="1237" height="204" key="GridCell.Tab.0.center" timestamp="1593830592846">
-      <screen x="0" y="0" width="1280" height="680" />
-    </state>
-    <state width="1237" height="204" key="GridCell.Tab.0.center/0.0.1280.680@0.0.1280.680" timestamp="1593830592846" />
-    <state width="1874" height="192" key="GridCell.Tab.0.center/0.27.1920.985@0.27.1920.985" timestamp="1592754259978" />
-    <state width="1237" height="204" key="GridCell.Tab.0.left" timestamp="1593830592846">
-      <screen x="0" y="0" width="1280" height="680" />
-    </state>
-    <state width="1237" height="204" key="GridCell.Tab.0.left/0.0.1280.680@0.0.1280.680" timestamp="1593830592846" />
-    <state width="1874" height="192" key="GridCell.Tab.0.left/0.27.1920.985@0.27.1920.985" timestamp="1592754259977" />
-    <state width="1237" height="204" key="GridCell.Tab.0.right" timestamp="1593830592846">
-      <screen x="0" y="0" width="1280" height="680" />
-    </state>
-    <state width="1237" height="204" key="GridCell.Tab.0.right/0.0.1280.680@0.0.1280.680" timestamp="1593830592846" />
-    <state width="1874" height="192" key="GridCell.Tab.0.right/0.27.1920.985@0.27.1920.985" timestamp="1592754259978" />
-    <state width="1237" height="204" key="GridCell.Tab.1.bottom" timestamp="1593830592846">
-      <screen x="0" y="0" width="1280" height="680" />
-    </state>
-    <state width="1237" height="204" key="GridCell.Tab.1.bottom/0.0.1280.680@0.0.1280.680" timestamp="1593830592846" />
-    <state width="1874" height="221" key="GridCell.Tab.1.bottom/0.27.1920.985@0.27.1920.985" timestamp="1592494891206" />
-    <state width="1237" height="204" key="GridCell.Tab.1.center" timestamp="1593830592846">
-      <screen x="0" y="0" width="1280" height="680" />
-    </state>
-    <state width="1237" height="204" key="GridCell.Tab.1.center/0.0.1280.680@0.0.1280.680" timestamp="1593830592846" />
-    <state width="1874" height="221" key="GridCell.Tab.1.center/0.27.1920.985@0.27.1920.985" timestamp="1592494891205" />
-    <state width="1237" height="204" key="GridCell.Tab.1.left" timestamp="1593830592846">
-      <screen x="0" y="0" width="1280" height="680" />
-    </state>
-    <state width="1237" height="204" key="GridCell.Tab.1.left/0.0.1280.680@0.0.1280.680" timestamp="1593830592846" />
-    <state width="1874" height="221" key="GridCell.Tab.1.left/0.27.1920.985@0.27.1920.985" timestamp="1592494891203" />
-    <state width="1237" height="204" key="GridCell.Tab.1.right" timestamp="1593830592846">
-      <screen x="0" y="0" width="1280" height="680" />
-    </state>
-    <state width="1237" height="204" key="GridCell.Tab.1.right/0.0.1280.680@0.0.1280.680" timestamp="1593830592846" />
-    <state width="1874" height="221" key="GridCell.Tab.1.right/0.27.1920.985@0.27.1920.985" timestamp="1592494891206" />
-    <state x="142" y="0" key="SettingsEditor" timestamp="1593692389771">
-      <screen x="0" y="0" width="1280" height="680" />
-    </state>
-    <state x="142" y="0" key="SettingsEditor/0.0.1280.680@0.0.1280.680" timestamp="1593692389771" />
-    <state x="415" y="148" width="672" height="469" key="search.everywhere.popup" timestamp="1593636178603">
-      <screen x="0" y="0" width="1280" height="680" />
-    </state>
-    <state x="415" y="148" width="672" height="469" key="search.everywhere.popup/0.0.1280.680@0.0.1280.680" timestamp="1593636178603" />
-    <state x="623" y="242" width="672" height="678" key="search.everywhere.popup/0.27.1920.985@0.27.1920.985" timestamp="1592489222950" />
+  <component name="VcsManagerConfiguration">
+    <MESSAGE value="add equals methode to all DSs and Paire" />
+    <option name="LAST_COMMIT_MESSAGE" value="add equals methode to all DSs and Paire" />
+  </component>
+  <component name="com.intellij.coverage.CoverageDataManagerImpl">
+    <SUITE FILE_PATH="coverage/py_fds$bst__1_.coverage" NAME="bst (1) Coverage Results" MODIFIED="1608769177545" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/pyfds" />
   </component>
 </project>

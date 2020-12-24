@@ -25,20 +25,20 @@ class Queue(object):
             size += 1
             tmp = tmp.next
         return size
-    
+
     @property
     def front(self):
         try:
             return self.__front.data
         except Exception as ex:
-            print("Error, %s" %ex, end=', ')
+            print("Error, %s" % ex, end=', ')
 
     @property
     def back(self):
         try:
             return self.__back.data
         except Exception as ex:
-            print("Error, %s" %ex, end=', ')
+            print("Error, %s" % ex, end=', ')
 
     def empty(self):
         return self.__front is None
@@ -80,7 +80,7 @@ class Queue(object):
         while not stck.empty():
             self.enqueue(stck.pop())
         return self
-    
+
     def sort(self):
         tmp1 = self.__front
         tmp2 = tmp1.next
@@ -115,7 +115,7 @@ class Queue(object):
             del tmp1, tmp2
             return que
         except Exception as ex:
-            print("Error, %s" %ex)
+            print("Error, %s" % ex)
 
     @classmethod
     def swap(cls, q1, q2):

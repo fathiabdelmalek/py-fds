@@ -29,7 +29,7 @@ class Stack:
         try:
             return self.__top.data
         except Exception as ex:
-            print("Error, %s" %ex, end=', ')
+            print("Error, %s" % ex, end=', ')
 
     def empty(self):
         return self.__top is None
@@ -108,7 +108,7 @@ class Stack:
             del tmp1, tmp2
             return stck
         except Exception as ex:
-            print("Error, %s" %ex)
+            print("Error, %s" % ex)
 
     @classmethod
     def swap(cls, s1, s2):
