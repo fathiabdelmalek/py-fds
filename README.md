@@ -2,7 +2,7 @@
 
 Simple implementaion of data structures __(DS)__ for python
 
-## Content
+## Content of the library
 
 - linked list
 - doubly linked list
