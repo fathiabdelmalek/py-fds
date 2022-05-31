@@ -51,5 +51,4 @@ def equals(bst1, bst2):
         return True
     elif bst1 is None or bst2 is None:
         return False
-    else:
-        return (bst1.data == bst2.data) and equals(bst1.right, bst2.right) and equals(bst1.left, bst2.left)
+    return (bst1.data == bst2.data) and equals(bst1.right, bst2.right) and equals(bst1.left, bst2.left)

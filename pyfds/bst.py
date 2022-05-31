@@ -7,40 +7,24 @@ class BST:
         self.__number_of_nodes = 0
         self.__number_of_liefs = 0
 
-    def __gototarget(self, tmp, data):
+    def __go_to_target(self, data):
+        tmp = self.__root
         while tmp:
             if data == tmp.data:
-                break
+                return tmp
             elif data < tmp.data:
                 tmp = tmp.left
             else:
                 tmp = tmp.right
-        return tmp
-
-    def __change_parents_child(self, data, p, node):
-        if data < p.data:
-            p.left = node
-        else:
-            p.right = node
-
-    def __delete(self, data, tmp):
-        p = self.parent(data)
-        if p:
-            self.__change_parents_child(data, p, tmp.left)
-        else:
-            self.__root = None
-        del p
 
     def __min(self, data):
-        tmp = self.__root
-        tmp = self.__gototarget(tmp, data)
+        tmp = self.__go_to_target(data)
         while tmp.left:
             tmp = tmp.left
         return tmp
 
     def __max(self, data):
-        tmp = self.__root
-        tmp = self.__gototarget(tmp, data)
+        tmp = self.__go_to_target(data)
         while tmp.right:
             tmp = tmp.right
         return tmp
@@ -75,17 +59,17 @@ class BST:
         return _height(self.__root)
 
     @property
-    def max(self):
-        root = self.__root
-        while root.right:
-            root = root.right
-        return root.data
-
-    @property
     def min(self):
         root = self.__root
         while root.left:
             root = root.left
+        return root.data
+
+    @property
+    def max(self):
+        root = self.__root
+        while root.right:
+            root = root.right
         return root.data
 
     def pre_order(self):
@@ -170,8 +154,7 @@ class BST:
         return None
 
     def successor(self, data):
-        tmp = self.__root
-        tmp = self.__gototarget(tmp, data)
+        tmp = self.__go_to_target(data)
         if tmp:
             if tmp.right:
                 return self.__min(tmp.right.data)
@@ -186,8 +169,7 @@ class BST:
         return None
 
     def predecessor(self, data):
-        tmp = self.__root
-        tmp = self.__gototarget(tmp, data)
+        tmp = self.__go_to_target(data)
         if tmp:
             if tmp.left:
                 return self.__max(tmp.left.data)
@@ -202,30 +184,49 @@ class BST:
         return None
 
     def delete(self, data):
-        tmp = self.__root
-        tmp = self.__gototarget(tmp, data)
-        if tmp:
-            if not tmp.left and not tmp.right:
-                self.__delete(data, tmp)
-            elif tmp.left and not tmp.right:
-                self.__delete(data, tmp)
-            elif not tmp.left and tmp.right:
-                self.__delete(data, tmp)
+        def _change_child(_cur, _node):
+            Node.chain(_cur, _node)
+
+        def _change_parents_child(_p, _node):
+            if data < _p.data:
+                _p.left = _node
+            else:
+                _p.right = _node
+
+        def _delete(_node):
+            _p = self.parent(data)
+            if _p:
+                if _node.left:
+                    _change_parents_child(_p, _node.left)
+                else:
+                    _change_parents_child(_p, _node.right)
+            else:
+                self.__root = None
+            del _p
+
+        node = self.__go_to_target(data)
+        if node:
+            if not node.left and not node.right:
+                _delete(node)
+            elif node.left and not node.right:
+                _delete(node)
+            elif not node.left and node.right:
+                _delete(node)
             else:
                 s = self.successor(data)
                 p = self.parent(s.data)
+                s.left = node.left
                 p.left = None
-                s.left = tmp.left
-                s.right = p
+                _change_child(s, p)
                 p = self.parent(data)
                 if p:
-                    self.__change_parents_child(data, p, s)
+                    _change_parents_child(p, s)
                 else:
                     self.__root = s
                 del s, p
-            d = tmp.data
-            tmp.left = tmp.right = None
-            del tmp
+            d = node.data
+            node.left = node.right = None
+            del node
             self.__number_of_nodes -= 1
             return d
         return None
