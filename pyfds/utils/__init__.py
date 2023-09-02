@@ -1,5 +1,6 @@
 from .node import Node
-from .dnode import Node
+from .dnode import Node as DNode
+from .tnode import Node as TNode
 from .pair import Pair
 
 

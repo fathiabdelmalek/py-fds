@@ -23,11 +23,7 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="69795da7-2c5d-4ccf-911c-c8619e472d99" name="Default Changelist" comment="add equals methode to all DSs and Paire">
-      <change beforePath="$PROJECT_DIR$/.gitignore" beforeDir="false" afterPath="$PROJECT_DIR$/.gitignore" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/py-fds.iml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/py-fds.iml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/pyfds/bst.py" beforeDir="false" afterPath="$PROJECT_DIR$/pyfds/bst.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/pyfds/utils/tnode.py" beforeDir="false" afterPath="$PROJECT_DIR$/pyfds/utils/tnode.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/setup.py" beforeDir="false" afterPath="$PROJECT_DIR$/setup.py" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -48,6 +44,9 @@
   <component name="MarkdownSettingsMigration">
     <option name="stateVersion" value="1" />
   </component>
+  <component name="ProjectColorInfo"><![CDATA[{
+  "associatedIndex": 6
+}]]></component>
   <component name="ProjectId" id="1cHcUk5vDLMiLPnHx2E2NsQEyAe" />
   <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
   <component name="ProjectViewState">
@@ -59,11 +58,14 @@
     "RunOnceActivity.OpenProjectViewOnStart": "true",
     "RunOnceActivity.ShowReadmeOnStart": "true",
     "WebServerToolWindowFactoryState": "false",
+    "git-widget-placeholder": "master",
+    "last_opened_file_path": "/home/fathi/dev/python/py-fds",
     "node.js.detected.package.eslint": "true",
     "node.js.detected.package.tslint": "true",
     "node.js.selected.package.eslint": "(autodetect)",
     "node.js.selected.package.tslint": "(autodetect)",
-    "nodejs_package_manager_path": "npm"
+    "nodejs_package_manager_path": "npm",
+    "vue.rearranger.settings.migration": "true"
   }
 }]]></component>
   <component name="RecentsManager">
@@ -263,6 +265,7 @@
       <workItem from="1608765199337" duration="3783000" />
       <workItem from="1649801790692" duration="454000" />
       <workItem from="1654026070797" duration="6824000" />
+      <workItem from="1693616035984" duration="78000" />
     </task>
     <task id="LOCAL-00001" summary="add equals methode to all DSs and Paire">
       <created>1606574476003</created>

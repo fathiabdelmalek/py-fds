@@ -1,6 +1,8 @@
 # pyfds
 
-Simple implementaion of data structures __(DS)__ for python
+Simple implementation of data structures __(DS)__ for python.
+
+This package no more supported and will not get new updates, see [PyAlStruct](https://pypi.org/project/PyAlStruct/) for new implementation of algorithms and data structures.
 
 ## Content of the library
 
