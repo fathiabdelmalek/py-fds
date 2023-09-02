@@ -14,7 +14,7 @@ setup(
     long_description_content_type="text/markdown",
     packages=['pyfds', 'pyfds.utils'],
     classifiers=[
-        "Development Status :: 7 - Inactive"
+        "Development Status :: 7 - Inactive",
         "Programming Language :: Python :: 3",
         "License :: OSI Approved :: MIT License",
         "Operating System :: OS Independent",
